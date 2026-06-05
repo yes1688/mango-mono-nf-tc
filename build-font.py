@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-合成字型：Maple Mono NF（base TTF）+ Noto Sans CJK TC（CJK glyph 覆蓋）
-策略：把 Noto 的 CJK CFF glyph 轉成 TTF quadratic，逐一植入 Maple Mono NF。
+合成字型：Mango Mono NF TC — Maple Mono NF（base TTF）+ Noto Sans CJK TC（CJK glyph 覆蓋）
+策略：把 Noto 的 CJK CFF glyph 轉成 TTF quadratic，逐一植入 Maple Mono NF base。
 
-輸出：crates/hive-native-gui/assets/fonts/MapleMono-NF-TC-Regular.ttf
+輸出：MangoMono-NF-TC-Regular.ttf
 
 覆蓋 Unicode 範圍（Noto 優先）：
   U+2E80-U+2EFF  CJK Radicals Supplement
@@ -27,13 +27,9 @@ from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.cu2quPen import Cu2QuPen
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_PATH = os.path.normpath(os.path.join(
-    SCRIPT_DIR, "../crates/hive-native-gui/assets/fonts/MapleMono-NF-Regular.ttf"
-))
+BASE_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "MangoMono-NF-Base.ttf"))
 NOTO_PATH = os.path.expanduser("~/Library/Fonts/NotoSansCJKtc-DemiLight.otf")
-OUT_PATH = os.path.normpath(os.path.join(
-    SCRIPT_DIR, "../crates/hive-native-gui/assets/fonts/MapleMono-NF-TC-Regular.ttf"
-))
+OUT_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "MangoMono-NF-TC-Regular.ttf"))
 
 CJK_RANGES = [
     (0x2E80, 0x2EFF),
