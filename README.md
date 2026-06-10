@@ -4,6 +4,10 @@
 
 ![preview](preview.png)
 
+### 終端機效果
+
+![terminal](preview-terminal.png)
+
 ## 字型組成
 
 | 部分 | 來源 | 授權 |
