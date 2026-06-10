@@ -8,6 +8,10 @@
 
 ![terminal](preview-terminal.png)
 
+### Agent 對話
+
+![chat](preview-chat.png)
+
 ## 字型組成
 
 | 部分 | 來源 | 授權 |
